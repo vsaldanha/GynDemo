@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script
+	src="http://angular-ui.github.com/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+<link
+	href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.css"
+	rel="stylesheet">
+
+<style>
+@import
+	url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+
+@import
+	url("http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css")
+	;
+
+html, body {
+	height: 100%;
+}
+
+section {
+	display: none;
+	padding: 20px 0 0;
+	border-top: 1px solid #ddd;
+}
+
+main {
+	min-width: 320px;
+	max-width: 800px;
+	padding: 50px;
+	margin: 0 auto;
+	background: #fff;
+}
+
+body {
+	font: 14px/1 'Open Sans', sans-serif;
+	color: #555;
+	background: #eee;
+}
+</style>
+</head>
+
+<body ng-controller="MainCtrl">
+	<main>
+	<section>
+		<div ng-controller="TabCtrl">
+			<tabset> <tab ng-repeat="tab in tabs"
+				heading="{{tab.title}}" active="tab.active"
+				select="onTabSelected(tab.slug)">
+			<div ng-view></div>
+			</tab> </tabset>
+		</div>
+	</section>
+	</main>
+	<script type="text/javascript" charset="utf-8">
+		angular.module('app', [ 'ui.bootstrap' ]).config(
+				[ '$routeProvider', '$locationProvider',
+						function($routeProvider, $locationProvider) {
+							$routeProvider.when('/patientDetails', {
+								templateUrl : 'Gyn/pages/PatientDetails.html',
+								controller : 'MainCtrl'
+							}).when('/clinicalExam', {
+								templateUrl : 'Gyn/pages/ClinicalExam.html',
+								controller : 'ClinicalExamCtrl',
+							}).when('/pathology', {
+								templateUrl : 'Gyn/pages/Pathology.html',
+								controller : 'PathologyCtrl'
+							}).when('/radiology', {
+								templateUrl : 'Gyn/pages/Radiology.html',
+								controller : 'RadiologyCtrl'
+							}).when('/radiotherapy', {
+								templateUrl : 'Gyn/pages/Radiotherapy.html',
+								controller : 'RadiotherapyCtrl'
+							}).when('/followUp', {
+								templateUrl : 'Gyn/pages/Followup.html',
+								controller : 'FollowupCtrl'
+							}).otherwise({
+								redirectTo : '/patientDetails'
+							});
+							$locationProvider.html5Mode({
+								enabled : true,
+								requireBase : false
+							})
+						} ]);
+
+		var TabCtrl = function($scope) {
+			$scope.tabs = [ {
+				slug : 'patientDetails',
+				title : "Patient Details"
+			}, {
+				slug : 'clinicalExam',
+				title : "Clinical Exam"
+			}, {
+				slug : 'pathology',
+				title : "Pathology"
+			}, {
+				slug : 'radiology',
+				title : "Radiology"
+			}, {
+				slug : 'radiotherapy',
+				title : "Radiotherapy"
+			}, {
+				slug : 'followUp',
+				title : "Follow Up"
+			}
+
+			];
+		};
+
+		ClinicalExamCtrl = function($scope, $location) {
+
+		};
+
+		PathologyCtrl = function($scope, $location) {
+
+		};
+
+		RadiologyCtrl = function($scope, $location) {
+
+		};
+
+		RadiotherapyCtrl = function($scope, $location) {
+
+		};
+
+		FollowupCtrl = function($scope, $location) {
+
+		};
+
+		MainCtrl = function($scope, $location) {
+
+			$scope.onTabSelected = function(tab) {
+				var route;
+				if (typeof tab === 'string') {
+					switch (tab) {
+					case 'dashboard':
+						route = tab;
+						break;
+					default:
+						route = tab;
+						break;
+					}
+				}
+				$location.path('/' + route);
+			};
+
+		};
+	</script>
+</body>
+
+</html>
