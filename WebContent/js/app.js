@@ -16,7 +16,7 @@ routingApp.config([ '$routeProvider', '$locationProvider',
 				templateUrl : 'Gyn/pages/tabular_forms.html',
 				controller : 'TabController'
 			}).otherwise({
-				redirectTo : '/index'
+				redirectTo : '/patientDetails'
 			});
 			$locationProvider.html5Mode({
 				enabled : true,

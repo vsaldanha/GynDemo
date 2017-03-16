@@ -1,6 +1,38 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<style>
+.box1 {
+    width: 49.5%;
+    float: left;
+    border-right: 1px dotted #CCC;
+    box-sizing: border-box;
+    padding: 0px 15px 0px 0px;
+}
+
+.box2 {
+    width: 49.5%;
+    float: right;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 15px;
+}
+.box3 {
+    text-align: center;
+    width: 100%;
+    border: 0;
+    padding: 17px 25px;
+    border-radius: 0px 0px 5px 5px;
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: 18px;
+}
+.col-md-v6 {
+    width: 250px;
+}
+.col-md-v8 {
+    width: 150px;
+}
+</style>
 <link rel="stylesheet" href="css/style.css">
 <link
 	href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css'
@@ -44,7 +76,7 @@
 								for='id_diameter'>Largest Diameter of Tumor (cm)</label>
 							<div class='col-md-6'>
 								<div class='form-group'>
-									<div class='col-md-6'>
+									<div class='col-md-v6'>
 										<input class='form-control' id='id_diameter'
 											placeholder='Diameter' type='text'>
 									</div>
@@ -55,7 +87,7 @@
 							<label class='control-label col-md-2 col-md-offset-2'
 								for='cervix'>Cervix</label>
 							<div class='col-md-4'>
-								<div class='col-md-8'>
+								<div class='col-md-v8'>
 									<div class='form-group internal'>
 										<select class='form-control' id='id_cervix'></select>
 									</div>
@@ -66,7 +98,7 @@
 							<label class='control-label col-md-2 col-md-offset-2'
 								for='Right_Parametrial'>Right Parametrial Involvement</label>
 							<div class='col-md-4'>
-								<div class='col-md-8'>
+								<div class='col-md-v8'>
 									<div class='form-group internal'>
 										<select class='form-control' id='id_right_param'></select>
 									</div>
@@ -77,7 +109,7 @@
 							<label class='control-label col-md-2 col-md-offset-2'
 								for='Left_Parametrial'>Left Parametrial Involvement</label>
 							<div class='col-md-4'>
-								<div class='col-md-8'>
+								<div class='col-md-v8'>
 									<div class='form-group internal'>
 										<select class='form-control' id='id_left_param'></select>
 									</div>
@@ -88,7 +120,7 @@
 							<label class='control-label col-md-2 col-md-offset-2'
 								for='Vaginal'>Vaginal Involvement</label>
 							<div class='col-md-4'>
-								<div class='col-md-8'>
+								<div class='col-md-v8'>
 									<div class='form-group internal'>
 										<select class='form-control' id='id_vaginal'></select>
 									</div>
@@ -99,7 +131,7 @@
 							<label class='control-label col-md-2 col-md-offset-2'
 								for='Vulval'>Vulval Involement</label>
 							<div class='col-md-4'>
-								<div class='col-md-8'>
+								<div class='col-md-v8'>
 									<div class='form-group internal'>
 										<select class='form-control' id='id_vulval'></select>
 									</div>
@@ -110,7 +142,7 @@
 							<label class='control-label col-md-2 col-md-offset-2'
 								for='bladder_rectum'>Bladder And Rectum</label>
 							<div class='col-md-4'>
-								<div class='col-md-8'>
+								<div class='col-md-v8'>
 									<div class='form-group internal'>
 										<select class='form-control' id='id_bladder_rectumx'></select>
 									</div>
@@ -124,7 +156,7 @@
 							<label class='control-label col-md-2 col-md-offset-label'
 								for='right_inguinal'>Right Inguinal LN</label>
 							<div class='col-md-4'>
-								<div class='col-md-8'>
+								<div class='col-md-v8'>
 									<div class='form-group internal'>
 										<select class='form-control' id='id_right_inguinal'></select>
 									</div>
@@ -161,7 +193,7 @@
 							<label class='control-label col-md-2 col-md-offset-label'
 								for='left_inguinal'>Left Inguinal LN</label>
 							<div class='col-md-4'>
-								<div class='col-md-8'>
+								<div class='col-md-v8'>
 									<div class='form-group internal'>
 										<select class='form-control' id='id_left_inguinal'>
 										</select>
@@ -198,7 +230,7 @@
 							<label class='control-label col-md-2 col-md-offset-label'
 								for='supracavicular'>Supracavicular</label>
 							<div class='col-md-4'>
-								<div class='col-md-8'>
+								<div class='col-md-v8'>
 									<div class='form-group internal'>
 										<select class='form-control' id='id_supracavicular'></select>
 									</div>

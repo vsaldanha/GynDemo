@@ -402,16 +402,3 @@ body {
 	background: #eee;
 }
 
-.box1 {
-  background-color: #ff9e2c;
-  position: absolute;
-  left: 0px;
-  width: 50%;
-}
-
-.box2 {
-  background-color: #b6701e;
-  position: absolute;
-  right: 0px;
-  width: 50%;
-}
