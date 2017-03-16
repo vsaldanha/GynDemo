@@ -348,13 +348,6 @@ section {
 	border-top: 1px solid #ddd;
 }
 
-main {
-	min-width: 320px;
-	max-width: 800px;
-	padding: 50px;
-	margin: 0 auto;
-	background: #fff;
-}
 
 body {
 	font: 14px/1 'Open Sans', sans-serif;
@@ -376,4 +369,35 @@ body {
 	label {
 		padding: 15px;
 	}
+}
+
+@import
+	url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+
+@import
+	url("http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css")
+	;
+
+html, body {
+	height: 100%;
+}
+
+section {
+	display: none;
+	padding: 20px 0 0;
+	border-top: 1px solid #ddd;
+}
+
+main {
+	min-width: 320px;
+	max-width: 1200px;
+	padding: 50px;
+	margin: 0 auto;
+	background: #fff;
+}
+
+body {
+	font: 14px/1 'Open Sans', sans-serif;
+	color: #555;
+	background: #eee;
 }
