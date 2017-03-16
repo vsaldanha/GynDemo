@@ -67,7 +67,7 @@ routingApp.controller(
 /* Controller for Homepage */
 routingApp.controller('HomeController', function($scope) {
 	console.log("home controller executed");
-	$scope.message = 'This is the homepage!';
+	$window.location.href="http://localhost:8080/Gyn/pages/tabular_forms.html";
 });
 
 /* Controller for Grid */
